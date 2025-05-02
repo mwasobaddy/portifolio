@@ -2,6 +2,14 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
+// Import project images properly
+import kenhaImg from '../assets/images/projects/kenha.jpg';
+import cseaImg from '../assets/images/projects/csea.jpg';
+import taskmasterImg from '../assets/images/projects/taskmaster.jpg';
+import realestateImg from '../assets/images/projects/realestate.jpg';
+import healthtrackerImg from '../assets/images/projects/healthtracker.jpg';
+import financeImg from '../assets/images/projects/finance.jpg';
+
 const Projects = () => {
   // Sample project data
   const projectsData = [
@@ -10,7 +18,7 @@ const Projects = () => {
       title: "KeNHA Innovation Hub",
       category: "Web Development",
       tags: ["React", "Node.js", "MongoDB"],
-      image: "/src/assets/images/projects/kenha.jpg",
+      image: kenhaImg,
       description: "A cutting-edge innovation hub designed for Kenya National Highways Authority to foster creativity and streamline internal processes.",
       client: "Kenya National Highways Authority",
       link: "#"
@@ -20,7 +28,7 @@ const Projects = () => {
       title: "CSEA Online Store",
       category: "E-commerce",
       tags: ["React", "Express", "PostgreSQL"],
-      image: "/src/assets/images/projects/csea.jpg",
+      image: cseaImg,
       description: "A comprehensive e-commerce platform for Classic Steel East Africa to showcase their products and reach a wider customer base.",
       client: "Classic Steel East Africa",
       link: "#"
@@ -30,7 +38,7 @@ const Projects = () => {
       title: "Task Master Pro",
       category: "Mobile App",
       tags: ["React Native", "Firebase", "Redux"],
-      image: "/src/assets/images/projects/taskmaster.jpg",
+      image: taskmasterImg,
       description: "A productivity mobile app designed to help users manage tasks, track progress, and improve time management.",
       client: "Personal Project",
       link: "#"
@@ -40,7 +48,7 @@ const Projects = () => {
       title: "Real Estate Dashboard",
       category: "UI/UX Design",
       tags: ["Figma", "Adobe XD", "Prototyping"],
-      image: "/src/assets/images/projects/realestate.jpg",
+      image: realestateImg,
       description: "A modern UI/UX design for a real estate management dashboard that provides comprehensive analytics and property management tools.",
       client: "Confidential",
       link: "#"
@@ -50,7 +58,7 @@ const Projects = () => {
       title: "Health Tracker",
       category: "Mobile App",
       tags: ["Flutter", "Firebase", "Health API"],
-      image: "/src/assets/images/projects/healthtracker.jpg",
+      image: healthtrackerImg,
       description: "A health tracking mobile application that helps users monitor their fitness goals, nutrition, and overall wellness.",
       client: "Fitness First",
       link: "#"
@@ -60,7 +68,7 @@ const Projects = () => {
       title: "Financial Analytics Platform",
       category: "Web Development",
       tags: ["React", "D3.js", "Express", "MongoDB"],
-      image: "/src/assets/images/projects/finance.jpg",
+      image: financeImg,
       description: "A comprehensive financial analytics platform that provides real-time insights, reporting, and visualization tools.",
       client: "Investment Partners Ltd.",
       link: "#"

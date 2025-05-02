@@ -1,6 +1,11 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+// Import images properly
+import heroImage from '../assets/images/hero-removebg-preview.png';
+import kenhaLogo from '../assets/images/KeNHA-Logo.jpeg';
+import cseaLogo from '../assets/images/CSEA-Logo.jpeg';
+import heroSecondary from '../assets/images/hero2.webp';
 
 // Animation variants for staggered animations
 const containerVariants = {
@@ -143,7 +148,7 @@ const Home = () => {
             >
               <div className="relative w-full max-w-md">
                 <img 
-                  src="/src/assets/images/hero.png" 
+                  src={heroImage} 
                   alt="Kelvin Mwangi" 
                   className="w-full h-auto relative z-10"
                   onError={(e) => {
@@ -201,7 +206,7 @@ const Home = () => {
             >
               <div className="h-48 bg-white flex items-center justify-center p-4">
                 <img 
-                  src="/src/assets/images/KeNHA-Logo.jpeg" 
+                  src={kenhaLogo} 
                   alt="Kenya National Highways Authority" 
                   className="h-full object-contain"
                   onError={(e) => {
@@ -230,7 +235,7 @@ const Home = () => {
             >
               <div className="h-48 bg-white flex items-center justify-center p-4">
                 <img 
-                  src="/src/assets/images/CSEA-Logo.jpeg" 
+                  src={cseaLogo} 
                   alt="Classic Steel East Africa" 
                   className="h-full object-contain"
                   onError={(e) => {
@@ -408,7 +413,7 @@ const Home = () => {
               transition={{ duration: 0.8 }}
             >
               <img 
-                src="/src/assets/images/hero2.webp" 
+                src={heroSecondary} 
                 alt="Professional Developer" 
                 className="w-full h-full object-cover"
                 onError={(e) => {

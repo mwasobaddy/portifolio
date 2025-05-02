@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+// Import passport image properly
+import passportImg from '../assets/images/passport.JPG';
 
 const About = () => {
   // Skills data
@@ -104,7 +106,7 @@ const About = () => {
             >
               <div className="relative z-10">
                 <img 
-                  src="/src/assets/images/passport.JPG" 
+                  src={passportImg} 
                   alt="Kelvin Mwangi" 
                   className="rounded-lg shadow-xl w-full max-w-md mx-auto"
                   onError={(e) => {
