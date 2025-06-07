@@ -110,18 +110,18 @@ const Home = () => {
               animate="visible"
             >
               <motion.div variants={itemVariants}>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                   The best <span ref={typewriterRef} className="text-primary"></span>
                 </h1>
               </motion.div>
               
               <motion.div variants={itemVariants}>
-                <h2 className="text-3xl font-bold mb-4">Hey! I Am Kelvin Mwangi</h2>
+                <h2 className="text-3xl font-bold mb-6">Hey! I Am Kelvin Mwangi</h2>
               </motion.div>
               
               <motion.p 
                 variants={itemVariants}
-                className="text-gray-600 mb-8 text-lg"
+                className="text-gray-700 mb-8 text-lg"
               >
                 Product designer and digital creative director working in design field for 7 years, 
                 specializing in user interface design and development of robust web applications.
@@ -216,10 +216,10 @@ const Home = () => {
                 />
               </div>
               <div className="p-6 bg-secondary">
-                <h3 className="text-xl font-semibold mb-3 text-center">
+                <h3 className="text-xl font-semibold mb-4 text-center">
                   Kenya <span className="text-primary">National Highways</span> Authority
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-800">
                   As a trusted partner, I played a pivotal role in developing a cutting-edge innovation hub and a streamlined internal car booking system for Kenya National Highways Authority. These solutions were designed to enhance efficiency, drive innovation, and optimize resource utilization within the organization.
                 </p>
               </div>
@@ -245,10 +245,10 @@ const Home = () => {
                 />
               </div>
               <div className="p-6 bg-secondary">
-                <h3 className="text-xl font-semibold mb-3 text-center">
+                <h3 className="text-xl font-semibold mb-4 text-center">
                   Classic <span className="text-primary">Steel East</span> Africa
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-800">
                   At Classic Steel East Africa, I played a key role in developing a dynamic online presence that helped them attract new clients and expand their market reach. The website I designed not only showcases their impressive range of products but also provides a seamless user experience for potential customers.
                 </p>
               </div>
@@ -309,7 +309,7 @@ const Home = () => {
                   ].map((service, index) => (
                     <motion.div
                       key={index}
-                      className="bg-white rounded-lg p-4 shadow-md border-l-4 border-primary"
+                      className="bg-white rounded-lg p-4 shadow-md border-l-4 border-primary hover:shadow-lg transition-shadow duration-300"
                       whileHover={{ x: 5 }}
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -321,8 +321,8 @@ const Home = () => {
                           {index + 1}.
                         </div>
                         <div>
-                          <h4 className="text-xl font-semibold mb-2">{service.title}</h4>
-                          <p className="text-gray-600">{service.description}</p>
+                          <h4 className="text-xl font-semibold mb-3">{service.title}</h4>
+                          <p className="text-gray-700">{service.description}</p>
                         </div>
                       </div>
                     </motion.div>
@@ -341,7 +341,7 @@ const Home = () => {
               <h2 className="text-3xl font-bold mb-6">
                 My Awesome <span className="text-primary">Services</span>
               </h2>
-              <p className="text-gray-600 mb-8">
+              <p className="text-gray-700 mb-8">
                 As a highly skilled and versatile professional, I bring together expertise in full-stack development, web development, front-end development, back-end development, and UI/UX design. This unique combination allows me to offer a complete range of services, from crafting seamless and responsive user interfaces to building robust and scalable server-side architectures resulting in seamless, efficient, and engaging web applications for my clients.
               </p>
               <div className="flex flex-wrap gap-4">
@@ -370,7 +370,7 @@ const Home = () => {
               <h2 className="text-3xl font-bold mb-6">
                 My Clients Always Get <span className="text-primary">Exceptional Results</span> From Me
               </h2>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-700 mb-6">
                 By working with me, you are guaranteed to get:
               </p>
               <ul className="space-y-4 mb-8">

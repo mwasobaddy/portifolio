@@ -30,6 +30,18 @@
     @apply text-2xl md:text-3xl;
   }
 
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+
+  h5 {
+    @apply text-lg md:text-xl;
+  }
+
+  h6 {
+    @apply text-lg; /* Or consider text-base md:text-lg if more granularity is needed */
+  }
+
   a {
     @apply transition-colors duration-300;
   }
@@ -37,11 +49,11 @@
 
 @layer components {
   .btn-primary {
-    @apply px-6 py-3 bg-primary text-white font-medium rounded-full transition-all hover:bg-opacity-90 hover:shadow-lg;
+    @apply px-6 py-3 bg-primary text-white font-medium rounded-full transition-all duration-300 hover:bg-opacity-90 hover:shadow-lg hover:scale-105 transform;
   }
   
   .btn-outline {
-    @apply px-6 py-3 border-2 border-primary text-primary font-medium rounded-full transition-all hover:bg-primary hover:text-white hover:shadow-lg;
+    @apply px-6 py-3 border-2 border-primary text-primary font-medium rounded-full transition-all duration-300 hover:bg-primary hover:text-white hover:shadow-lg hover:scale-105 transform;
   }
   
   .section {

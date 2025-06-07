@@ -63,8 +63,8 @@ const Footer = () => {
             © {currentYear} ObaDevOps. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-400 text-sm hover:text-primary">Privacy Policy</a>
-            <a href="#" className="text-gray-400 text-sm hover:text-primary">Terms of Service</a>
+            <a href="#" className="text-gray-400 text-sm hover:text-primary hover:underline transition-colors duration-300">Privacy Policy</a>
+            <a href="#" className="text-gray-400 text-sm hover:text-primary hover:underline transition-colors duration-300">Terms of Service</a>
           </div>
         </div>
       </div>
@@ -75,7 +75,7 @@ const Footer = () => {
 // Helper components
 const FooterLink = ({ to, label }) => (
   <li>
-    <Link to={to} className="text-gray-400 hover:text-primary transition-colors">
+    <Link to={to} className="text-gray-400 hover:text-primary hover:underline transition-colors duration-300">
       {label}
     </Link>
   </li>
@@ -101,7 +101,7 @@ const SocialLink = ({ href, icon }) => {
     <a 
       href={href} 
       className="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center
-                hover:bg-primary transition-colors"
+                hover:bg-primary hover:scale-110 transform transition-all duration-300"
       target="_blank"
       rel="noopener noreferrer"
     >

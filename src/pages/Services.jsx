@@ -186,7 +186,7 @@ const Services = () => {
               How I <span className="text-primary">Work</span>
             </motion.h2>
             <motion.p
-              className="text-gray-600"
+              className="text-gray-700"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -224,7 +224,7 @@ const Services = () => {
                           {step.number}
                         </div>
                         <h3 className="text-xl font-bold mb-3">{step.title}</h3>
-                        <p className="text-gray-600">{step.description}</p>
+                        <p className="text-gray-700">{step.description}</p>
                       </div>
                     </div>
                     
@@ -249,7 +249,7 @@ const Services = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl font-bold mb-6">Why Choose <span className="text-primary">Me?</span></h2>
-              <p className="text-gray-600 mb-8">
+              <p className="text-gray-700 mb-8">
                 With over 7 years of experience in web development and design, I bring a unique blend of technical expertise and creative thinking to every project. Here's what sets me apart:
               </p>
 
@@ -287,7 +287,7 @@ const Services = () => {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-                      <p className="text-gray-600">{item.description}</p>
+                      <p className="text-gray-700">{item.description}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -303,7 +303,7 @@ const Services = () => {
             >
               <div className="relative z-10 bg-white rounded-lg shadow-xl p-6 border-t-4 border-primary">
                 <h3 className="text-2xl font-bold mb-4 text-center">Get a Free Consultation</h3>
-                <p className="text-gray-600 mb-6 text-center">
+                <p className="text-gray-700 mb-6 text-center">
                   Have a project in mind? Let's discuss how I can help bring your ideas to life.
                 </p>
                 
@@ -346,7 +346,7 @@ const Services = () => {
               Frequently Asked <span className="text-primary">Questions</span>
             </motion.h2>
             <motion.p
-              className="text-gray-600"
+              className="text-gray-700"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -385,14 +385,14 @@ const Services = () => {
             ].map((faq, index) => (
               <motion.div 
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-md"
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 * index }}
               >
                 <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
-                <p className="text-gray-600">{faq.answer}</p>
+                <p className="text-gray-700">{faq.answer}</p>
               </motion.div>
             ))}
           </div>
@@ -404,8 +404,8 @@ const Services = () => {
         <div className="container mx-auto text-center">
           <motion.h2 
             className="text-3xl font-bold mb-6"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 20 }} // Changed from scale: 0.9 to y: 20
+            whileInView={{ opacity: 1, y: 0 }} // Changed from scale: 1 to y: 0
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
@@ -461,14 +461,14 @@ const ServiceCard = ({ service }) => {
         visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
       }}
       whileHover={{ y: -10 }}
-      className="bg-white rounded-lg shadow-lg overflow-hidden border-t-4 border-primary h-full flex flex-col"
+      className="bg-white rounded-lg shadow-lg hover:shadow-xl transform hover:scale-102 transition-all duration-300 overflow-hidden border-t-4 border-primary h-full flex flex-col"
     >
       <div className="p-6">
         <div className={`w-16 h-16 rounded-lg ${getColorClass(service.color)} flex items-center justify-center text-white text-3xl mb-6`}>
           {service.icon}
         </div>
         <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
-        <p className="text-gray-600 mb-6">{service.description}</p>
+        <p className="text-gray-700 mb-6">{service.description}</p>
       </div>
       
       <div className="border-t border-gray-100 p-6 mt-auto">
@@ -477,7 +477,7 @@ const ServiceCard = ({ service }) => {
           {service.features.map((feature, index) => (
             <li key={index} className="flex items-start">
               <span className="text-primary mr-2">✓</span>
-              <span className="text-gray-600">{feature}</span>
+              <span className="text-gray-700">{feature}</span>
             </li>
           ))}
         </ul>

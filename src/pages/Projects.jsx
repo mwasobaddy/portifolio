@@ -222,8 +222,8 @@ const Projects = () => {
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <h3 className="text-2xl font-bold text-gray-600">No projects found</h3>
-                  <p className="text-gray-500 mt-2">Try adjusting your search or filter criteria</p>
+                  <h3 className="text-2xl font-bold text-gray-700">No projects found</h3>
+                  <p className="text-gray-700 mt-2">Try adjusting your search or filter criteria</p>
                 </motion.div>
               )}
             </AnimatePresence>
@@ -243,7 +243,7 @@ const Projects = () => {
             <h2 className="text-3xl font-bold mb-6">
               Have a Project in Mind?
             </h2>
-            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-gray-700 mb-8 max-w-2xl mx-auto">
               I'm always excited to take on new challenges and collaborate on innovative projects.
               Let's discuss how I can help bring your ideas to life.
             </p>
@@ -268,7 +268,7 @@ const ProjectCard = ({ project }) => {
         visible: { opacity: 1, y: 0 }
       }}
       whileHover={{ y: -10 }}
-      className="bg-white rounded-xl overflow-hidden shadow-lg"
+      className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transform hover:scale-102 transition-all duration-300"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -287,7 +287,7 @@ const ProjectCard = ({ project }) => {
           className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6"
         >
           <div>
-            <h3 className="text-xl font-bold text-white mb-1">{project.title}</h3>
+            <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
             <p className="text-gray-200 text-sm">
               {project.category} | Client: {project.client}
             </p>
@@ -300,13 +300,13 @@ const ProjectCard = ({ project }) => {
           {project.tags.map((tag, index) => (
             <span 
               key={index} 
-              className="bg-secondary text-primary text-xs px-3 py-1 rounded-full"
+              className="bg-secondary text-dark text-xs px-3 py-1 rounded-full"
             >
               {tag}
             </span>
           ))}
         </div>
-        <p className="text-gray-600 mb-6">
+        <p className="text-gray-700 mb-6">
           {project.description}
         </p>
         <a 

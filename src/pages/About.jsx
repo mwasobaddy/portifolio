@@ -151,28 +151,28 @@ const About = () => {
                 className="grid grid-cols-2 gap-4 mb-8"
               >
                 <div>
-                  <h3 className="font-semibold mb-4 text-lg">Personal Info</h3>
+                  <h4 className="font-semibold mb-4">Personal Info</h4> {/* Changed h3 to h4, text-lg class removed to inherit global h4 style */}
                   <ul className="space-y-2">
                     <li className="flex">
                       <span className="font-medium w-24">Name:</span>
-                      <span className="text-gray-600">Kelvin Mwangi</span>
+                      <span className="text-gray-700">Kelvin Mwangi</span>
                     </li>
                     <li className="flex">
                       <span className="font-medium w-24">Location:</span>
-                      <span className="text-gray-600">Nairobi, Kenya</span>
+                      <span className="text-gray-700">Nairobi, Kenya</span>
                     </li>
                     <li className="flex">
                       <span className="font-medium w-24">Experience:</span>
-                      <span className="text-gray-600">7+ Years</span>
+                      <span className="text-gray-700">7+ Years</span>
                     </li>
                     <li className="flex">
                       <span className="font-medium w-24">Freelance:</span>
-                      <span className="text-gray-600">Available</span>
+                      <span className="text-gray-700">Available</span>
                     </li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-4 text-lg">Contact</h3>
+                  <h4 className="font-semibold mb-4">Contact</h4> {/* Changed h3 to h4, text-lg class removed to inherit global h4 style */}
                   <ul className="space-y-2">
                     <li className="flex">
                       <span className="font-medium w-24">Email:</span>
@@ -216,7 +216,8 @@ const About = () => {
               My <span className="text-primary">Skills</span>
             </motion.h2>
             <motion.p
-              className="text-gray-600"
+              className="text-gray-700"
+              className="text-gray-700"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -233,7 +234,7 @@ const About = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-white p-6 rounded-lg shadow-lg"
+              className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <h3 className="text-2xl font-semibold mb-6 text-center">Technical Skills</h3>
               <div className="space-y-6">
@@ -269,7 +270,7 @@ const About = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-white p-6 rounded-lg shadow-lg"
+              className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <h3 className="text-2xl font-semibold mb-6 text-center">Soft Skills</h3>
               <div className="space-y-6">
@@ -316,7 +317,7 @@ const About = () => {
               Education & <span className="text-primary">Qualifications</span>
             </motion.h2>
             <motion.p
-              className="text-gray-600"
+              className="text-gray-700"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -351,8 +352,8 @@ const About = () => {
                         <span className="inline-block px-4 py-2 bg-primary text-white rounded-full text-sm font-medium mb-4">
                           {item.period}
                         </span>
-                        <h3 className="text-xl font-bold mb-2">{item.degree}</h3>
-                        <h4 className="text-gray-600 font-medium mb-4">{item.institution}</h4>
+                        <h4 className="text-xl font-bold mb-2">{item.degree}</h4> {/* Changed h3 to h4 */}
+                        <h5 className="text-gray-700 font-medium mb-4">{item.institution}</h5> {/* Changed h4 to h5 and text-gray-600 to text-gray-700 */}
                         <p className="text-gray-700">{item.description}</p>
                       </div>
                     </div>
@@ -372,8 +373,8 @@ const About = () => {
         <div className="container mx-auto text-center">
           <motion.h2 
             className="text-3xl font-bold mb-6"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 20 }} // Changed from scale: 0.9 to y: 20
+            whileInView={{ opacity: 1, y: 0 }} // Changed from scale: 1 to y: 0
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >

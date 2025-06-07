@@ -89,19 +89,19 @@ const Contact = () => {
               className="space-y-8"
             >
               <h2 className="text-3xl font-bold mb-6">Contact <span className="text-primary">Information</span></h2>
-              <p className="text-gray-600 mb-8">
+              <p className="text-gray-700 mb-8">
                 Feel free to reach out through any of the methods below. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
               </p>
               
               <div className="space-y-6">
                 {/* Email Contact */}
                 <div className="flex items-start space-x-4">
-                  <div className="bg-secondary rounded-lg p-3 text-xl text-primary mt-1">
+                  <div className="bg-secondary rounded-lg p-3 text-xl text-dark mt-1"> {/* Changed text-primary to text-dark */}
                     ✉️
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-1">Email</h3>
-                    <a href="mailto:contact@obadevops.com" className="text-gray-600 hover:text-primary transition-colors">
+                    <a href="mailto:contact@obadevops.com" className="text-gray-700 hover:text-primary transition-colors">
                       contact@obadevops.com
                     </a>
                   </div>
@@ -109,12 +109,12 @@ const Contact = () => {
                 
                 {/* Phone Contact */}
                 <div className="flex items-start space-x-4">
-                  <div className="bg-secondary rounded-lg p-3 text-xl text-primary mt-1">
+                  <div className="bg-secondary rounded-lg p-3 text-xl text-dark mt-1"> {/* Changed text-primary to text-dark */}
                     📱
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-1">Phone</h3>
-                    <a href="tel:+1234567890" className="text-gray-600 hover:text-primary transition-colors">
+                    <a href="tel:+1234567890" className="text-gray-700 hover:text-primary transition-colors">
                       +123 456 7890
                     </a>
                   </div>
@@ -122,12 +122,12 @@ const Contact = () => {
                 
                 {/* Location */}
                 <div className="flex items-start space-x-4">
-                  <div className="bg-secondary rounded-lg p-3 text-xl text-primary mt-1">
+                  <div className="bg-secondary rounded-lg p-3 text-xl text-dark mt-1"> {/* Changed text-primary to text-dark */}
                     📍
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-1">Location</h3>
-                    <p className="text-gray-600">Nairobi, Kenya</p>
+                    <p className="text-gray-700">Nairobi, Kenya</p>
                   </div>
                 </div>
               </div>
@@ -282,10 +282,24 @@ const Contact = () => {
       <section className="section bg-gray-50">
         <div className="container mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl font-bold mb-4">My <span className="text-primary">Location</span></h2>
-            <p className="text-gray-600">
+            <motion.h2
+              className="text-3xl font-bold mb-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              My <span className="text-primary">Location</span>
+            </motion.h2>
+            <motion.p
+              className="text-gray-700"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
               Based in Nairobi, Kenya but working with clients globally.
-            </p>
+            </motion.p>
           </div>
           
           <div className="rounded-lg overflow-hidden shadow-lg h-80 bg-gray-200">
@@ -306,10 +320,24 @@ const Contact = () => {
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Frequently Asked <span className="text-primary">Questions</span></h2>
-              <p className="text-gray-600">
+              <motion.h2
+                className="text-3xl font-bold mb-4"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+              >
+                Frequently Asked <span className="text-primary">Questions</span>
+              </motion.h2>
+              <motion.p
+                className="text-gray-700"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
                 Quick answers to common questions about getting in touch and working with me.
-              </p>
+              </motion.p>
             </div>
             
             <div className="space-y-6">
@@ -333,14 +361,14 @@ const Contact = () => {
               ].map((faq, index) => (
                 <motion.div 
                   key={index}
-                  className="bg-white p-6 rounded-lg shadow-sm border border-gray-100"
+                  className="bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 border border-gray-100"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.1 * index }}
                 >
                   <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
-                  <p className="text-gray-600">{faq.answer}</p>
+                  <p className="text-gray-700">{faq.answer}</p>
                 </motion.div>
               ))}
             </div>
